@@ -1,1 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Rally Royalle — Tennis Tournament</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"DM Sans",sans-serif;
+  background:#0b2119;
+  color:#f5edda;
+  line-height:1.6;
+}
+
+nav{
+  position:fixed;
+  left:0;
+  top:0;
+  width:230px;
+  height:100vh;
+  padding:35px 25px;
+  background:#071a13;
+  border-right:1px solid #b99a55;
+  z-index:10;
+}
+
+.logo{
+  font-family:"Cormorant Garamond",serif;
+  font-size:32px;
+  font-weight:700;
+  color:#d6b76a;
+  margin-bottom:50px;
+}
+
+nav a{
+  display:block;
+  color:#eee5d0;
+  text-decoration:none;
+  padding:14px 0;
+  font-size:15px;
+  transition:.2s;
+}
+
+nav a:hover{
+  color:#d6b76a;
+}
+
+main{
+  margin-left:230px;
+}
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:60px 30px;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 35%,#315b43 0%,#153c2a 35%,#0b2119 75%);
+}
+
+.hero:before{
+  content:"";
+  position:absolute;
+  width:600px;
+  height:600px;
+  border:1px solid rgba(214,183,106,.35);
+  border-radius:50%;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:900px;
+}
+
+.small{
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:#d6b76a;
+  font-size:14px;
+  margin-bottom:18px;
+}
+
+h1{
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(70px,12vw,150px);
+  line-height:.8;
+  font-weight:600;
+  color:#f5edda;
+}
+
+.subtitle{
+  margin:35px auto;
+  max-width:650px;
+  font-size:20px;
+  color:#d9d0bc;
+}
+
+.date{
+  font-family:"Cormorant Garamond",serif;
+  font-size:32px;
+  color:#d6b76a;
+  margin-bottom:30px;
+}
+
+.btn{
+  display:inline-block;
+  padding:15px 30px;
+  border:1px solid #d6b76a;
+  color:#071a13;
+  background:#d6b76a;
+  text-decoration:none;
+  font-weight:700;
+  transition:.25s;
+}
+
+.btn:hover{
+  background:#f5edda;
+  border-color:#f5edda;
+}
+
+section{
+  min-height:60vh;
+  padding:100px 8%;
+}
+
+.section-title{
+  font-family:"Cormorant Garamond",serif;
+  font-size:60px;
+  color:#d6b76a;
+  margin-bottom:30px;
+}
+
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.card{
+  padding:35px;
+  border:1px solid rgba(214,183,106,.4);
+  background:#102c20;
+}
+
+.card h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:30px;
+  color:#f5edda;
+  margin-bottom:12px;
+}
+
+.card p{
+  color:#cfc6b3;
+}
+
+.info{
+  background:#071a13;
+}
+
+footer{
+  margin-left:230px;
+  padding:40px;
+  text-align:center;
+  border-top:1px solid rgba(214,183,106,.3);
+  color:#aaa18f;
+}
+
+@media(max-width:700px){
+
+  nav{
+    position:relative;
+    width:100%;
+    height:auto;
+    text-align:center;
+    padding:20px;
+  }
+
+  .logo{
+    margin-bottom:10px;
+  }
+
+  nav a{
+    display:inline-block;
+    padding:8px 10px;
+  }
+
+  main{
+    margin-left:0;
+  }
+
+  .hero{
+    min-height:85vh;
+  }
+
+  .card-grid{
+    grid-template-columns:1fr;
+  }
+
+  section{
+    padding:70px 25px;
+  }
+
+  footer{
+    margin-left:0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">RALLY ROYALLE</div>
+
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#details">Tournament</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+
+    <div class="small">Sarojini Academy Presents</div>
+
+    <h1>Rally<br>Royalle</h1>
+
+    <p class="subtitle">
+      A premium tennis tournament built for competition,
+      sportsmanship and unforgettable rallies.
+    </p>
+
+    <div class="date">02 October 2026</div>
+
+    <a class="btn" href="#details">EXPLORE TOURNAMENT</a>
+
+  </div>
+</section>
+
+<section id="about">
+  <div class="small">The Tournament</div>
+
+  <div class="section-title">Where Champions Meet.</div>
+
+  <p style="max-width:750px;color:#cfc6b3;font-size:18px;">
+    Rally Royalle brings together young tennis players for a
+    competitive and exciting tournament experience at
+    Sarojini Academy, Hyderabad.
+  </p>
+</section>
+
+<section class="info" id="details">
+
+  <div class="small">Tournament Details</div>
+
+  <div class="section-title">The Royal Court</div>
+
+  <div class="card-grid">
+
+    <div class="card">
+      <h3>02 OCT</h3>
+      <p>
+        Tournament Day<br>
+        October 2nd, 2026
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>VENUE</h3>
+      <p>
+        Sarojini Academy<br>
+        Baghalingampally, Hyderabad
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>TENNIS</h3>
+      <p>
+        Competitive matches,
+        exciting rallies and a
+        memorable tournament experience.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="contact">
+
+  <div class="small">Join The Rally</div>
+
+  <div class="section-title">Ready to Play?</div>
+
+  <p style="max-width:650px;color:#cfc6b3;font-size:18px;margin-bottom:30px;">
+    Get ready to step onto the court and make your rally count.
+  </p>
+
+  <a class="btn" href="mailto:rallyroyalle@gmail.com">
+    CONTACT ORGANISERS
+  </a>
+
+</section>
+
+</main>
+
+<footer>
+  © 2026 Rally Royalle · Sarojini Academy
+</footer>
+
+</body>
+</html>
